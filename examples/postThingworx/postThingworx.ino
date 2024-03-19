@@ -28,7 +28,7 @@ float twxPropertyValues[SENSORCOUNT]; //Vector to store sensor vars to be sent t
 //->Timing Vars
 unsigned long lastConnectionTime = 0; //Last connection ms time between server requests
 //->ThingworxESP32 Vars
-ThingWorx myThing(TWX_HOST, TWX_PORT, TWX_API_KEY, TWX_THING_NAME, TWX_SERVICE_NAME);  //Declare the TWX object with his corresponding properties
+Thingworx myThing(TWX_HOST, TWX_PORT, TWX_API_KEY, TWX_THING_NAME, TWX_SERVICE_NAME);  //Declare the TWX object with his corresponding properties
 
 //Subroutines & functions
 void printWifiStatus() {
@@ -79,7 +79,7 @@ void loop() {
   twxPropertyValues[1] = 88; //Write a constant value to the second sensor var
   if (millis() - lastConnectionTime > TPOST) {  //Send request to server every TPOST seconds
     myThing.post(SENSORCOUNT, TWX_PROPERTY_NAMES, twxPropertyValues); //Send values to server platform
-    // myThing.post(SENSORCOUNT, TWX_PROPERTY_NAMES, twxPropertyValues, debug=true); //Send values to server platform
+    // myThing.post(SENSORCOUNT, TWX_PROPERTY_NAMES, twxPropertyValues, true); //Send values to server platform and print debug info
     lastConnectionTime = millis();  //Refresh last connection time
   }
 }

@@ -46,7 +46,7 @@ void Thingworx::post(const int sensorCount, const char* sensorNames[], float val
   url += _serviceName;
   String body = "{";
   for (int idx = 0; idx < sensorCount; idx++) {
-    if (idx != 0) body += "&";
+    if (idx != 0) body += ",";
     body += "\"" + String(sensorNames[idx]) + "\"";
     body += ":";
     body += values[idx];
