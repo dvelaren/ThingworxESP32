@@ -1,6 +1,6 @@
 # Thingworx ESP32 Library
 ![alt text](./resources/general.png)
-Arduino library using REST API to send and receive data to Thingworx platform 8. It allows to send and receive multiple variables with the provided methods.
+Arduino library using REST API to send and receive data to Thingworx platform 9. It allows to send and receive multiple variables with the provided methods.
 
 ## Requirements
 
