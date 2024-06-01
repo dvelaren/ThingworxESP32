@@ -89,8 +89,12 @@ void loop() {
       Serial.println(error.c_str());
       return;
     }
-    for (int i = 0; i < READCOUNT; i++) twxPropertyValues[i] = doc["rows"][0][TWX_PROPERTY_NAMES[i]];  //Extract each variable value from the JSON and store it on the corresponding var
-    Serial.println("write1: " + String(twxPropertyValues[0]) + " write2: " + String(twxPropertyValues[1]));
+    for (int i = 0; i < READCOUNT; i++) {
+      if (i != 0) Serial.print(", ");
+      twxPropertyValues[i] = doc["rows"][0][TWX_PROPERTY_NAMES[i]];  //Extract each variable value from the JSON and store it on the corresponding var
+      Serial.print(String(TWX_PROPERTY_NAMES[i]) + ": " + String(twxPropertyValues[i]));
+    }
+    Serial.println();
     //twxPropertyValues[0] = doc["rows"][0][TWX_PROPERTY_NAMES[0]];
     //Serial.println("write1: " + String(twxPropertyValues[0]));
     analogWrite(LED_BUILTIN, twxPropertyValues[0]); //Reflect thingworx variable as PWM in onboard led
