@@ -14,9 +14,18 @@ Arduino library using REST API to send and receive data to Thingworx platform 9.
 
 The REST API implemented in this library follows this format:
 
-GET request
+GET request for 1 property
 ```http
 GET /Thingworx/Things/MyThing/Properties/MyProperty HTTP/1.1
+Host: thingworx.myserver.com
+Accept: application/json
+Connection: close
+appKey: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+GET request for multiple properties
+```http
+GET /Thingworx/Things/MyThing/Properties HTTP/1.1
 Host: thingworx.myserver.com
 Accept: application/json
 Connection: close

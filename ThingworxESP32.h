@@ -1,6 +1,6 @@
 /**********************************************************************************************************
 ThingworxESP32.h - Library for uploading values to a ThingWorx "Thing" via ESP32 modules
-Created by David Velasquez 16/03/2024 for
+Created by David Velasquez 31/05/2024 for
 Universidad EAFIT
 www.eafit.edu.co
 

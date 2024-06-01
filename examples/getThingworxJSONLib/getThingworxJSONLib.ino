@@ -1,6 +1,6 @@
 //Name: getThingworxJSONLib
 //Author: David Velasquez
-//Date: 16/03/2024
+//Date: 31/05/2024
 //Description: This program gets 2 variables from Thingworx server and reflects the first one as a PWM on LED
 //Requires ArduinoJson library
 
@@ -69,7 +69,7 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT); //Built in LED from board as output
 
   //Physical outputs initialization
-  digitalWrite(LED_BUILTIN, LOW); //Turn off built in LED
+  analogWrite(LED_BUILTIN, 0); //Turn off built in LED
 
   //Communications
   Serial.begin(115200); //Serial communications with computer at 115200 bauds for debug purposes

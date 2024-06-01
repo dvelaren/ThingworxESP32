@@ -1,7 +1,7 @@
 //Name: getThingworx
 //Author: David Velasquez
-//Date: 16/03/2024
-//Description: This program gets Thingworx Server variables using REST GET request through ThingworxWiFi101 library
+//Date: 31/05/2024
+//Description: This program gets Thingworx Server variables using REST GET request through ThingworxESP32 library
 
 //Libraries
 #include <ThingworxESP32.h>
